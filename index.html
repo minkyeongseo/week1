@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="color" id="cPic">
+	<center>
+	<input id="vol" type="range" max="60" min="0">
+	<button id="christmasBut">play</button>
+	<audio id="christmasSnd" src="thischristmas.mp3"></audio>
+	<button id="stopBut">stop</button>
+</br>
+	<img id="mas" src="before.jpg">
+</center>
+
+	<script type="text/javascript">
+		
+		cPic.onclick = function(){
+			document.body.style.background = cPic.value; 
+		}
+		vol.value = 60
+		vol.oninput = function(){
+			christmasSnd.volume = vol.value / 60;
+		}
+		christmasBut.onclick = function(){
+			christmasSnd.play();
+		}
+		stopBut.onclick = function(){
+			christmasSnd.pause();
+		}
+
+	</script>
+</body>
+</html>
